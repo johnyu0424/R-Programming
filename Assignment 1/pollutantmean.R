@@ -11,7 +11,8 @@
 ## Return the mean of the pollutant across all monitors list
 ## in the 'id' vector (ignoring NA values)
 
-pollutantmean <- function(directory, pollutant, id = 1:332) {
+pollutantmean <- function(directory, pollutant, id = 1:332) 
+{
     # get the full path of the directory
     fPath <- paste(getwd(), directory, sep = "/")
     
