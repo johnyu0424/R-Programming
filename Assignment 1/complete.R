@@ -25,8 +25,8 @@ complete <- function(directory, id = 1:332)
     # get the files in question
     fiq <- files[id]
     
-    # initialize nob to have some dummy data, will be remove later
-    nob <- 0
+    # initialize nobs to have some dummy data, will be remove later
+    nobs <- 0
     
     # loop through all files in question
     for(file in fiq)
@@ -42,15 +42,15 @@ complete <- function(directory, id = 1:332)
         # the count of all complete cases.
         numCompleteData <- length(completeData[completeData == TRUE])
         
-        # add the count into nob vector
-        nob <- c(nob, numCompleteData)
+        # add the count into nobs vector
+        nobs <- c(nobs, numCompleteData)
     }
     
     # remove the first dummy data that was added earlier
-    nob <- nob[-1]
+    nobs <- nobs[-1]
     
-    # creating the data frame using id and nob
-    completeDataFrame <- data.frame(id, nob)
+    # creating the data frame using id and nobs
+    completeDataFrame <- data.frame(id, nobs)
     
     # return the complete data frame
     completeDataFrame

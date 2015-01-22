@@ -27,7 +27,7 @@ corr <- function(directory, threshold = 0)
     i <- 1
     
     # loop through all the complete cases
-    for(count in completeData$nob)
+    for(count in completeData$nobs)
     {
         if(count > threshold)
         {
